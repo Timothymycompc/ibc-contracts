@@ -15,7 +15,7 @@ import (
 
 	"github.com/cosmos/interchaintest/v11/ibc"
 
-	"github.com/cosmos/ibc-contracts/e2e/v8/testvalues"
+	"github.com/lfdt-ibc/ibc-contracts/e2e/v8/testvalues"
 )
 
 func defaultModifyGenesis() func(ibc.ChainConfig, []byte) ([]byte, error) {
@@ -53,7 +53,7 @@ func defaultModifyGenesis() func(ibc.ChainConfig, []byte) ([]byte, error) {
 	}
 }
 
-func wfchainModifyGenesis() func(ibc.ChainConfig, []byte) ([]byte, error) {
+func acmeModifyGenesis() func(ibc.ChainConfig, []byte) ([]byte, error) {
 	return func(chainConfig ibc.ChainConfig, genBz []byte) ([]byte, error) {
 		appGenesis, err := genutiltypes.AppGenesisFromReader(bytes.NewReader(genBz))
 		if err != nil {

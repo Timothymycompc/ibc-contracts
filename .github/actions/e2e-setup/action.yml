@@ -21,22 +21,13 @@ runs:
         retry_wait_seconds: 5
         command: docker login ghcr.io -u ${{ github.actor }} --password-stdin <<< "$GH_TOKEN"
 
-    - name: Pre-pull private images
-      uses: nick-invision/retry@ce71cc2ab81d554ebbe88c79ab5975992d79ba08 # v3.0.2
-      with:
-        timeout_minutes: 10
-        max_attempts: 3
-        retry_wait_seconds: 5
-        command: docker pull ghcr.io/cosmos/wfchain:latest
-      continue-on-error: true
-
     - name: Set up foundry tooling
       uses: ./.github/actions/foundry-setup
 
     - name: Setup Go
       uses: actions/setup-go@7b8cf10d4e4a01d4992d18a89f4d7dc5a3e6d6f4 # v4.3.0
       with:
-        go-version: 1.26.5
+        go-version: 1.26.10
         check-latest: true
         cache-dependency-path: e2e/interchaintestv8/go.sum
 
