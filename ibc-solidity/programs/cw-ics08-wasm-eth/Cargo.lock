@@ -1045,19 +1045,26 @@ version = "0.1.0"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
- "ethereum-trie-db 0.1.0",
  "ethereum-types 0.1.0",
+ "hash-db",
+ "hash256-std-hasher",
  "hex",
  "ibc-eureka-solidity-types 0.1.0",
  "ibc-proto 0.52.0",
+ "memory-db 0.34.0",
  "milagro_bls",
+ "primitive-types 0.14.0",
  "prost",
+ "rlp",
+ "rlp-derive",
  "schemars",
  "serde",
  "serde_json",
  "sha2 0.10.9",
+ "sha3 0.10.9",
  "thiserror 2.0.19",
  "tree_hash 0.1.0",
+ "trie-db",
 ]
 
 [[package]]
@@ -1067,7 +1074,7 @@ source = "git+https://github.com/cosmos/ibc-contracts?tag=cw-ics08-wasm-eth-v1.3
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
- "ethereum-trie-db 0.1.0 (git+https://github.com/cosmos/ibc-contracts?tag=cw-ics08-wasm-eth-v1.3.0)",
+ "ethereum-trie-db",
  "ethereum-types 0.1.0 (git+https://github.com/cosmos/ibc-contracts?tag=cw-ics08-wasm-eth-v1.3.0)",
  "hex",
  "ibc-eureka-solidity-types 0.1.0 (git+https://github.com/cosmos/ibc-contracts?tag=cw-ics08-wasm-eth-v1.3.0)",
@@ -1080,23 +1087,6 @@ dependencies = [
  "sha2 0.10.9",
  "thiserror 2.0.19",
  "tree_hash 0.1.0 (git+https://github.com/cosmos/ibc-contracts?tag=cw-ics08-wasm-eth-v1.3.0)",
-]
-
-[[package]]
-name = "ethereum-trie-db"
-version = "0.1.0"
-dependencies = [
- "alloy-primitives",
- "hash-db",
- "hash256-std-hasher",
- "hex",
- "memory-db 0.34.0",
- "primitive-types 0.14.0",
- "rlp",
- "rlp-derive",
- "sha3 0.10.9",
- "thiserror 2.0.19",
- "trie-db",
 ]
 
 [[package]]
